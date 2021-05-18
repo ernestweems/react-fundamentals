@@ -4,10 +4,10 @@
 <body>
   <div id="root"></div>
 
-  <!-- 💣 remove this line
+
   <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
-  💣 remove this line -->
+  
 
   <script type="module">
     const rootElement = document.getElementById('root')
@@ -15,14 +15,69 @@
     // You're going to re-implement this code using React!
     // 💣 So go ahead and delete this implementation (or comment it out for now)
     // These three lines are similar to React.createElement
-    const element = document.createElement('div')
-    element.textContent = 'Hello World' // 💰 in React, you set this with the "children" prop
-    element.className = 'container' // 💰 in React, this is also called the "className" prop
-    // This is similar to ReactDOM.render
-    rootElement.append(element)
-
+    // const element = document.createElement('div')
+    //element.textContent = 'Hello World'
+     // 💰 in React, you set this with the "children" prop
+     // element.className = 'container' // 💰 in React, this is also called the "className" prop
+     // This is similar to ReactDOM.render
+    //  rootElement.append(element)
     // 🐨 Please re-implement the regular document.createElement code above
     // with these React API calls
     // 💰 The example in the markdown file should be a good hint for you.
+
+      // const element = React.createElement('div', {
+      //  className:'container',
+      //  children: 'Hello World'
+      // })
+      // ReactDOM.render(element,rootElement)
+
+      //refernce
+      /*
+       <div class="container">
+       <span>Hello</span>
+       <span>World</span>
+       </div>
+      */ 
+    // additional parameter
+      // const element = React.createElement('div',
+      //  {className:'container',},'Hello World!')
+      // ReactDOM.render(element,rootElement)
+
+    //additional parameters can pass multiple as coma seperated list
+     
+      // const element = React.createElement('div',
+      //  {className:'container',},'Hello',' ', 'World💩')
+      // ReactDOM.render(element,rootElement)
+
+      // const element = React.createElement('div',
+      //  {className:'container',
+      //   children:['Hello',' ', 'World🍧']
+      // },)
+      // ReactDOM.render(element,rootElement)    
+      
+   
+      //  let helloEle = React.createElement('span',{},'Hello')
+      //  let worldELe = React.createElement('span',{},'World 🎂')
+      
+      // const element = React.createElement('div',
+      //  {className:'container',
+      //   children:[helloEle,' ', worldELe]
+      // },)
+      // ReactDOM.render(element,rootElement)
+
+      // Alternative not a best practice just for learnig purposes
+      // let helloEle2 = React.createElement('span',{},'Hello')
+      //  let worldELe2 = React.createElement('span',null,'World 🔥🔥🔥🐲')
+      //  let worldELeAlt = React.createElement('span',{children:'mo 😎✨'})
+      
+       let helloEle = React.createElement('span',{},'Hello')
+       let worldELe = React.createElement('span',{},'World 🎂')
+      const element = React.createElement('div',
+       {className:'container',},
+       helloEle2,
+        ' ',
+        worldELe2,
+        worldELeAlt)
+        ReactDOM.render(element,rootElement)
   </script>
 </body>
